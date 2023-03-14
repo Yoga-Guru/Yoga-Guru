@@ -6,16 +6,6 @@ const closeBtn = document.getElementById("close");
 const browseBtn = document.getElementById("browse-btn");
 const file_upload_section = document.getElementById("file-upload-section");
 
-file_upload_section.addEventListener("change", () => {
-  /* console.log("inside");
-  const image_path  = `assets/file.png`
-  console.log();
-  file_upload_section.innerHTML = `<img  id="file" src="${image_path}">` */
-  browseBtn.style.display = "none";
-})
-
-downloadBtn.addEventListener("click", downloadFile);
-
 function downloadFile() {
   const link = downloadLink.value;
 
@@ -69,11 +59,3 @@ function downloadFile() {
     window.stop()
   })
 }
-
-closeBtn.addEventListener("click", () => {
-  downloadForm.style.display = "none";
-})
-
-downloadURL.addEventListener('click', () => {
-  downloadLink.value = ""
-})

@@ -10,9 +10,15 @@ font-family: 'Mochiy Pop One', sans-serif;
           box-sizing: border-box;
 }
 
+/*  
+$bgcolor1: #e3fdfd;
+$bgcolor2: #cbf1f5;
+$bgcolor3: #a6e3e9;
+$bgcolor4: #71c9ce;
+*/
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e3fdfd), color-stop(#cbf1f5), color-stop(#a6e3e9), to(#71c9ce));
-  background: linear-gradient(to bottom, #e3fdfd, #cbf1f5, #a6e3e9, #71c9ce);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3fdfd), color-stop(#d3ebd5), color-stop(#b7ebbc), to(#7be885));
+  background: linear-gradient(to bottom, #e3fdfd, #d3ebd5, #b7ebbc, #7be885);
 }
 
 #nav-section {
@@ -35,7 +41,7 @@ body {
   font-family: "Arima", cursive;
   text-decoration: none;
   font-weight: 600;
-  color: #3282b8;
+  color: #2a7832;
   margin-right: 30px;
   padding-bottom: 5px;
 }
@@ -43,27 +49,27 @@ body {
 #nav-section #nav-btns .btn:hover {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  border-bottom: 2px solid #3282b8;
+  border-bottom: 2px solid #2a7832;
 }
 
 #nav-heading {
   padding: 10px 0 0 20px;
   font-family: "Mochiy Pop One", sans-serif;
-  color: #3282b8;
+  color: #2a7832;
   font-size: 2.5rem;
   letter-spacing: 2px;
 }
 
 #heading {
   font-family: "Mochiy Pop One", sans-serif;
-  color: #3282b8;
+  color: #2a7832;
   font-size: 2.5rem;
   letter-spacing: 2px;
 }
 
 #sub-heading {
   font-family: "Mochiy Pop One", sans-serif;
-  color: #3282b8;
+  color: #2a7832;
   font-size: 2.5rem;
   letter-spacing: 2px;
 }
@@ -88,8 +94,8 @@ body {
 }
 
 #clicked {
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
 }
 
 #redirect-btns {
@@ -98,7 +104,7 @@ body {
 
 #redirect-btns > a {
   text-decoration: none;
-  background-color: #3282b8;
+  background-color: #2a7832;
   color: #fff;
   padding: 8px 18px;
   font-size: 1.2rem;
@@ -156,8 +162,8 @@ body {
 #signup-submit,
 #login-submit {
   border: none;
-  background: #cbf1f5;
-  color: #3282b8;
+  background: #d3ebd5;
+  color: #2a7832;
   padding: 8px 18px;
   font-size: 1rem;
   border-radius: 6px;
@@ -206,14 +212,14 @@ body {
 
 #verification > h3 {
   font-family: "Arima", cursive;
-  color: #3282b8;
+  color: #2a7832;
 }
 
 #verification > a {
   font-family: "Arima", cursive;
   text-decoration: none;
   font-weight: 600;
-  color: #3282b8;
+  color: #2a7832;
   margin-right: 30px;
   padding-bottom: 5px;
   color: #000;
@@ -225,7 +231,7 @@ body {
 #verification > a:hover {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  border-bottom: 2px solid #3282b8;
+  border-bottom: 2px solid #2a7832;
 }
 
 #login-section {
@@ -251,21 +257,56 @@ body {
   font-family: "Arima", cursive;
   min-height: 90vh;
   width: 100vw;
+}
+
+#dashboard-main-section #dashboard-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 100px;
+}
+
+#dashboard-main-section #dashboard-box img {
+  margin-top: 20px;
+  margin-left: 30px;
+  height: 80px;
+  width: 60px;
+}
+
+#dashboard-main-section #dashboard-box label {
+  margin-top: 50px;
+  font-size: 2rem;
+  color: #2a7832;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+#dashboard-main-section #user-details h3 {
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 1.5rem;
+}
+
+#dashboard-main-section #user-details #user-details-box {
+  margin-left: 30px;
+  width: 500px;
+  background-color: #e3fdfd;
+  padding: 10px 0 10px 10px;
+  border-radius: 12px;
+}
+
+#dashboard-main-section #user-details #user-details-box label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#dashboard-main-section #user-details #user-details-box span {
+  display: block;
 }
 
 #left-section {
   padding-right: 50px;
-  border-right: 2px solid #71c9ce;
+  border-right: 2px solid #7be885;
 }
 
 #download-link {
@@ -283,7 +324,7 @@ body {
   font-family: "Arima", cursive;
   text-decoration: none;
   font-weight: 600;
-  color: #3282b8;
+  color: #2a7832;
   margin-right: 30px;
   padding-bottom: 5px;
   padding: 8px 15px;
@@ -303,7 +344,7 @@ body {
   font-family: "Arima", cursive;
   font-weight: 600;
   font-size: 1.2rem;
-  color: #3282b8;
+  color: #2a7832;
   margin-right: 20px;
 }
 
@@ -311,7 +352,7 @@ body {
   font-family: "Arima", cursive;
   text-decoration: none;
   font-weight: 600;
-  color: #3282b8;
+  color: #2a7832;
   margin-right: 30px;
   padding-bottom: 5px;
   padding: 8px 15px;
@@ -376,7 +417,7 @@ body {
           flex-direction: column;
   height: 250px;
   width: 400px;
-  border: 2px dashed #3282b8;
+  border: 2px dashed #2a7832;
 }
 
 #file {
@@ -386,7 +427,7 @@ body {
 
 .fa-cloud-upload-alt {
   font-size: 5rem;
-  color: #3282b8;
+  color: #2a7832;
 }
 
 #download-form {
@@ -424,7 +465,7 @@ body {
   font-family: "Arima", cursive;
   text-decoration: none;
   font-weight: 600;
-  color: #3282b8;
+  color: #2a7832;
   margin-right: 30px;
   padding-bottom: 5px;
   color: #000;
@@ -447,7 +488,7 @@ body {
 
 #copy-btn {
   font-size: 1.5rem;
-  color: #3282b8;
+  color: #2a7832;
   margin-left: 15px;
   cursor: pointer;
 }
@@ -456,8 +497,8 @@ body {
   text-align: center;
   font-size: 2.5rem;
   letter-spacing: 2px;
-  color: #3282b8;
-  font-family: 'Mochiy Pop One', sans-serif;
+  color: #2a7832;
+  font-family: "Mochiy Pop One", sans-serif;
 }
 
 #email-label {
@@ -465,7 +506,7 @@ body {
   text-align: center;
   margin-top: 40px;
   font-size: 1.2rem;
-  color: #3282b8;
+  color: #2a7832;
   font-weight: 600;
 }
 
@@ -484,18 +525,175 @@ body {
   font-family: "Arima", cursive;
   text-decoration: none;
   font-weight: 600;
-  color: #3282b8;
+  color: #2a7832;
   margin-right: 30px;
   padding-bottom: 5px;
   padding: 8px 15px;
   border: none;
   background-color: #e3fdfd;
-  color: #3282b8;
+  color: #2a7832;
   font-size: 1rem;
   display: block;
   margin: auto;
   margin-top: 15px;
   border-radius: 8px;
+}
+
+#home-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+}
+
+#home-section #home-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100vw;
+}
+
+#home-section #home-box h1 {
+  margin-left: 30px;
+}
+
+#home-section #home-box a {
+  display: block;
+  margin-left: auto;
+  margin-right: 60px;
+  text-decoration: none;
+  border: none;
+  background: #7be885;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#home-section #warmup {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+#home-section #warmup a {
+  text-decoration: none;
+  border: none;
+  background: #7be885;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#home-section #asans-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#home-section #asans-container .asan-box {
+  height: 200px;
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+#home-section #asans-container .asan-box img {
+  height: 150px;
+  width: 200px;
+  border-radius: 12px;
+}
+
+#home-section #asans-container .asan-box div {
+  text-align: center;
+}
+
+#task-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+}
+
+#task-main-section #task-video-box #asan-video {
+  height: 500px;
+  width: 420px;
+}
+
+#task-main-section #task-img-box img {
+  height: 500px;
+  width: 420px;
+}
+
+#task-main-section #task-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  gap: 5rem;
+}
+
+#task-main-section #task-details #accuracy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#task-main-section #task-details #accuracy label {
+  font-size: 2rem;
+  position: relative;
+  top: 5px;
+}
+
+#task-main-section #task-details #accuracy #message {
+  text-decoration: none;
+  border: none;
+  background: #7be885;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#task-main-section #task-details #timer {
+  text-decoration: none;
+  border: none;
+  background: #7be885;
+  color: #2a7832;
+  padding: 8px 18px;
+  font-size: 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 2px solid #2a7832 !important;
 }
 
 @-webkit-keyframes slide-right {
@@ -534,7 +732,7 @@ body {
     font-family: "Arima", cursive;
     text-decoration: none;
     font-weight: 600;
-    color: #3282b8;
+    color: #2a7832;
     margin-right: 30px;
     padding-bottom: 5px;
     margin-right: 20px;
@@ -542,7 +740,7 @@ body {
   #nav-section #nav-btns .btn:hover {
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
-    border-bottom: 2px solid #3282b8;
+    border-bottom: 2px solid #2a7832;
   }
   #dashboard-nav-section {
     -webkit-box-orient: vertical;
@@ -562,7 +760,7 @@ body {
   #file-upload-section {
     height: 250px;
     width: 300px;
-    border: 2px dashed #3282b8;
+    border: 2px dashed #2a7832;
   }
   #dashboard-main-section {
     gap: 2rem;
@@ -573,7 +771,7 @@ body {
   }
   #right-section {
     padding-top: 50px;
-    border-top: 2px solid #71c9ce;
+    border-top: 2px solid #7be885;
     text-align: center;
   }
   #download-link {

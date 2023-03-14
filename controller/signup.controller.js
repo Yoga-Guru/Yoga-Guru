@@ -80,12 +80,12 @@ function sendMail(email, token) {
       const mailOptions = {
         from: process.env.GMAIL,
         to: email,
-        subject: "Verification Code from Share Me",
+        subject: "Verification Code from Yoga Guru",
         html: `
             <html>
             <body>
             <h1>Verification Link<h1>
-            <a href="http://localhost:3000/verified?id=${hash}" style="text-decoration:none;padding: 8px 12px;background:#fff;color:#3282b8">Click here</a>
+            <a href="http://localhost:3000/verified?id=${hash}" style="text-decoration:none;padding: 8px 12px;background:#fff;color:#2a7832">Click here</a>
             </body>
             <script>
             </script>
@@ -151,7 +151,7 @@ function verified(req, res) {
 
 async function addUser(decoded) {
   //console.log(decoded);
-  const data = [decoded.name,decoded.age,decoded.email,decoded.password,decoded.medical_condition,decoded.experience,decoded.joining_date];
+  const data = [decoded.name,decoded.age,decoded.email,decoded.password,decoded.medical_condition,decoded.experience,decoded.joining_date,0,decoded.experience];
   //console.log(data);
   connection.query(`insert into users(name,age,email,password,medical_condition,experience,joining_date) values(?,?,?,?,?,?,?)`,data,(error, result) => {
       if (error) {
@@ -159,6 +159,13 @@ async function addUser(decoded) {
       }
     }
   );
+  const data1 = [decoded.email,0,decoded.medical_condition,decoded.experience]
+  connection.query(`insert into userWorkoutDetails(email,noofdays,medical_condition,level) values(?,?,?,?)`,data1,(error, result) => {
+    if (error) {
+      return error;
+    }
+  }
+);
 }
 
 module.exports = { renderSignup, checkUser, verifyEmail, verified };

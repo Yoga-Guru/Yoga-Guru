@@ -6,28 +6,16 @@ const {
   verified,
 } = require("../controller/signup.controller");
 const { renderLogin, login } = require("../controller/login.controller.js");
+const {renderHome,fetchAsans} = require("../controller/home.controller.js");
 const { renderDashboard } = require("../controller/dashboard.controller");
+const renderTask = require("../controller/task.controller");
 const { isAuth } = require("../middlewear/jwtMiddlewear");
-/* 
-const storage = multer.diskStorage({
-  destination: "./uploads",
-  filename: (req, file, cb) => {
-    const extension = getExtension(file.originalname);
-    const filenamee = extension.name + "-" + Date.now() + extension.ext;
-    return cb(null, filenamee);
-  },
-});
-
-const upload = multer({
-  storage: storage,
-});
-*/
 
 router.get("/", (req, res) => {
   const token = req.cookies.JWTtoken;
 
   if (token) {
-    return res.redirect("/dashboard");
+    return res.redirect("/home");
   }
   res.render("index");
 });
@@ -40,8 +28,13 @@ router.get("/verified", verified);
 router.get("/login", renderLogin);
 router.post("/login", login);
 
-/*  
+router.get("/home", isAuth, renderHome);
+router.post("/fetchAsans", isAuth, fetchAsans);
+
 router.get("/dashboard", isAuth, renderDashboard);
+
+router.get("/task", isAuth, renderTask);
+/*  
 router.post("/dashboard", isAuth, upload.single("file"), fileUpload);
 router.post("/sendKey",isAuth,sendKey);
 router.post("/download",isAuth,downloadfile);
@@ -54,6 +47,7 @@ router.get("/something", (req,res) =>{
 
 router.get("/logout", (req, res) => {
   res.clearCookie("JWTtoken");
+  res.clearCookie("User Data :");
   res.redirect("/");
 });
 
