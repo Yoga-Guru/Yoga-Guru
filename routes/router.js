@@ -9,6 +9,9 @@ const { renderLogin, login } = require("../controller/login.controller.js");
 const {renderHome,fetchAsans} = require("../controller/home.controller.js");
 const { renderDashboard } = require("../controller/dashboard.controller");
 const renderTask = require("../controller/task.controller");
+const renderTest = require("../controller/test.controller");
+const renderContact = require("../controller/contact.controller");
+const renderAbout = require("../controller/about.controller");
 const { isAuth } = require("../middlewear/jwtMiddlewear");
 
 router.get("/", (req, res) => {
@@ -34,12 +37,12 @@ router.post("/fetchAsans", isAuth, fetchAsans);
 router.get("/dashboard", isAuth, renderDashboard);
 
 router.get("/task", isAuth, renderTask);
-/*  
-router.post("/dashboard", isAuth, upload.single("file"), fileUpload);
-router.post("/sendKey",isAuth,sendKey);
-router.post("/download",isAuth,downloadfile);
-router.post("/deleteFile",isAuth,deletefile)
-*/
+
+router.get("/test", isAuth, renderTest);
+
+router.get("/about", isAuth, renderAbout);
+
+router.get("/contact", isAuth, renderContact);
 
 router.get("/something", (req,res) =>{
   res.render("something")

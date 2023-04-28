@@ -33,11 +33,13 @@ $color1: #2a7832;
 }
 
 body {
-  background: linear-gradient(to bottom,
-      $bgcolor1,
-      $bgcolor2,
-      $bgcolor3,
-      $bgcolor4 );
+  background: linear-gradient(
+    to bottom,
+    $bgcolor1,
+    $bgcolor2,
+    $bgcolor3,
+    $bgcolor4
+  );
 }
 
 #nav-section {
@@ -105,7 +107,7 @@ body {
   margin-top: 20px;
 }
 
-#redirect-btns>a {
+#redirect-btns > a {
   text-decoration: none;
   background-color: $color1;
   color: #fff;
@@ -134,7 +136,7 @@ body {
   margin-top: 10px;
 }
 
-#signup-form>div {
+#signup-form > div {
   margin-top: 15px;
 }
 
@@ -194,12 +196,12 @@ body {
   font-weight: 600;
 }
 
-#verification>h3 {
+#verification > h3 {
   font-family: "Arima", cursive;
   color: $color1;
 }
 
-#verification>a {
+#verification > a {
   @include btn();
   color: #000;
   font-size: 1.5rem;
@@ -207,7 +209,7 @@ body {
   margin-top: 20px;
 }
 
-#verification>a:hover {
+#verification > a:hover {
   transition: all 0.2s ease-in;
   border-bottom: 2px solid $color1;
 }
@@ -269,9 +271,7 @@ body {
         display: block;
       }
     }
-
   }
-
 }
 
 #left-section {
@@ -384,7 +384,7 @@ body {
   margin-top: 50px;
 }
 
-#download-form>#download-url {
+#download-form > #download-url {
   @include btn();
   color: #000;
   font-size: 1.5rem;
@@ -460,11 +460,11 @@ body {
   #home-box {
     display: flex;
     max-width: 100vw;
-    
+
     h1 {
       margin-left: 30px;
     }
-    
+
     a {
       display: block;
       margin-left: auto;
@@ -480,10 +480,10 @@ body {
       cursor: pointer;
     }
   }
-  #warmup{
+  #warmup {
     margin-top: 40px;
     margin-left: 30px;
-    a{
+    a {
       text-decoration: none;
       border: none;
       background: $bgcolor4;
@@ -495,27 +495,27 @@ body {
       cursor: pointer;
     }
   }
-  #asans-container{
+  #asans-container {
     display: flex;
     flex-wrap: wrap;
-    .asan-box{
+    .asan-box {
       height: 200px;
       width: 200px;
       margin-top: 20px;
       margin-left: 30px;
-      img{
+      img {
         height: 150px;
         width: 200px;
         border-radius: 12px;
       }
-      div{
+      div {
         text-align: center;
       }
     }
   }
 }
 
-#task-main-section{
+#task-main-section {
   font-family: "Arima", cursive;
   min-height: 90vh;
   max-width: 100vw;
@@ -525,35 +525,35 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 30px;
-  
-  #task-video-box{
-    #asan-video{
+
+  #task-video-box {
+    #asan-video {
       height: 500px;
       width: 420px;
     }
   }
 
-  #task-img-box{
-    img{
+  #task-img-box {
+    img {
       height: 500px;
       width: 420px;
     }
   }
 
-  #task-details{
+  #task-details {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     gap: 5rem;
-    #accuracy{
+    #accuracy {
       display: flex;
-      label{
+      label {
         font-size: 2rem;
         position: relative;
         top: 5px;
       }
-      #message{
+      #message {
         text-decoration: none;
         border: none;
         background: $bgcolor4;
@@ -565,20 +565,180 @@ body {
         cursor: pointer;
       }
     }
-    #timer{
+    #timerr,#next-btn {
       text-decoration: none;
-        border: none;
-        background: $bgcolor4;
-        color: $color1;
-        padding: 8px 18px;
-        font-size: 2rem;
-        border-radius: 6px;
-        font-weight: 500;
-        cursor: pointer;
+      border: none;
+      background: $bgcolor4;
+      color: $color1;
+      padding: 8px 18px;
+      font-size: 2rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
     }
+    #timerr{
+      display: flex;
+    }
+    #pose-name{
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+    #notice{
+      position: relative;
+      bottom: 60px;
+      right: 400px;
+      font-size: 1.2rem;
+      color: #fff;
+      background: red;
+      padding: 5px 12px;
+      border-radius: 8px;
+    }
+  }
+}
+
+#test-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    color: #134218;
+    opacity: 0.3;
+  }
+}
+
+#about-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+
+  #founder-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .info-box{
+      width: 300px;
+      transition: transform 250ms;
+      // margin-left: 30px;
+      color: whitesmoke;
+      .prof-img{
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin: auto;
+        position: relative;
+        top: 80px;
+      }
+      .info-det{
+        padding-left: 10px;
+        padding-top: 90px;
+        padding-bottom: 10px;
+        border-radius: 8px;
+        background-color: #78cb80;
+        .socials{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a{
+            img{
+              height: 30px;
+              width: 30px;
+              margin-right: 20px;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .info-box:hover{
+      position: relative;
+      bottom: 30px;
+      // transition: .5s ease-in-out all;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+#contact-main-section {
+  font-family: "Arima", cursive;
+  min-height: 90vh;
+  max-width: 100vw;
+
+  h1{
+    text-align: center;
+    padding: 30px;
+    font-size: 2rem;
+    color: #134218;
   }
 
 }
+
+#contact-box{
+  display: flex ;
+  gap: 2rem;
+  .vertical-line{
+    border-left: 1.5px solid #134218;
+  }
+  #map-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+  }
+  #contact-form{
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+      label{
+        padding: 20px 0 3px 0;
+        font-size: 1.2rem;
+      }
+      input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #2a7832;
+        width: 300px;
+        color: #134218;
+        padding-left: 3px;
+        letter-spacing: 0.5px;
+        height: 30px;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      input:focus,textarea:focus{
+        outline: none;
+      }
+      textarea{
+        background: transparent;
+        border: 2px solid #2a7832;
+        color: #134218;
+        border-radius: 8px;
+        padding: 3px;
+        letter-spacing: 1px;
+        width: 300px;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      button{
+        padding: 8px 12px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: #134218;
+        background: #2a7832;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+  
+} 
+
 
 .active {
   border-bottom: 2px solid #2a7832 !important;

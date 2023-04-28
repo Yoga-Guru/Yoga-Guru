@@ -1,4 +1,4 @@
-// Rendering Login Page
+// Rendering Task Page
 function renderTask(req, res) {
     res.render("task");
 }
